@@ -1,0 +1,16 @@
+extends layout
+//- STEP 1 made a submission form for user entries - Step 2 is on ??
+block content
+	h1 Video Contest!
+	form#video-form(action="/submission" method="post")
+		.form-inline
+			.form-group
+				input.form-control(name="name" type="text" placeholder="Name")
+			.form-group
+				input.form-control(name="url" type="text" placeholder="URL to YouTube video")
+			.form-group
+				input.form-control(name="title" type='text' placeholder="Title")
+			.form-group
+				input.form-control(name="description" type='text' placeholder="Description")
+			.form-group
+				input.btn.btn-primary(type="submit")
