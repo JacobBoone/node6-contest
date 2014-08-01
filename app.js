@@ -1,11 +1,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-
+var mongoose = require('mongoose')
+var Newvideo = require('./models/submission.js')
 
 var indexController = require('./controllers/index.js');
-var mongoose = require('mongoose')
 
-// mongoose.connect('mongodb://localhost/contest')
+// mongoose saves it in contest DB
+mongoose.connect('mongodb://localhost/contest')
 
 
 
@@ -24,6 +25,19 @@ app.get('/', indexController.index);
 // // Submit entry is the submitted form when accessed as a POST
 app.post('/submission', indexController.submission);
 
+
+// // displays a list of videos?
+// app.get('/submission', function(req, res){
+// 	Newvideo.find({}, function(err, data){
+// 		res.render('contest', {contest: data})
+
+// 	})
+	
+// });
+
+
+
+// 1 is where i want it, 2 is what i want happen on the page from the function viewsubmisson on the indexcontroller
 
 app.get('/viewsubmissions', indexController.viewsubmission);
 

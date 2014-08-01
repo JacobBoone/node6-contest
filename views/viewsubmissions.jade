@@ -1,7 +1,7 @@
 extends layout
 
 block content
-	for item in database
+	for item in contest
 		p=item.name
 		//- p=item.video
 		iframe(width="560" height="315" src=item.video frameborder="0" allowfullscreen)
