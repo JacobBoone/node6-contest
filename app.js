@@ -25,7 +25,7 @@ app.get('/', indexController.index);
 app.post('/submission', indexController.submission);
 
 
-
+app.get('/viewsubmissions', indexController.viewsubmission);
 
 
 

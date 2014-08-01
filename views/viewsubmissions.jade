@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	for item in database
+		p=item.name
+		//- p=item.video
+		iframe(width="560" height="315" src=item.video frameborder="0" allowfullscreen)
+		h3=item.title
+		p=item.description
